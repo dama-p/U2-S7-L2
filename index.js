@@ -16,7 +16,9 @@ form.onsubmit = function (e) {
 
   console.log(typeof username);
 
-  pastName.textContent = localStorage.getItem("username");
+  pastName.textContent = "User " + localStorage.getItem("username") + " successfully saved!";
+  input.value = "";
+  
 };
 
 btnDelete.onclick = function (e) {
@@ -41,6 +43,7 @@ function counterFn() {
 }
 
 window.onload = function () {
+  pastName.textContent = "User " + localStorage.getItem("username") + " successfully saved!";
   counterFn();
   setInterval(counterFn, 1000);
 };
