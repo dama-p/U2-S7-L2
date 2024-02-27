@@ -27,6 +27,12 @@ btnDelete.onclick = function (e) {
   pastName.textContent = localStorage.getItem("username");
 };
 
+const createLine = function () {
+    if ("username") {
+        pastName.textContent = "User " + localStorage.getItem("username") + " successfully saved!";
+    }
+}
+
 // ESERCIZIO 2
 
 function counterFn() {
@@ -43,7 +49,7 @@ function counterFn() {
 }
 
 window.onload = function () {
-  pastName.textContent = "User " + localStorage.getItem("username") + " successfully saved!";
+  createLine();
   counterFn();
   setInterval(counterFn, 1000);
 };
